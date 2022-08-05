@@ -3,8 +3,8 @@
 busybox losetup -f disk.img
 busybox losetup -a
 ```
-busybox mount 
 ```
+busybox mount -t ext4 /dev/block/loop0 ./root/
 ```
 ```
 busybox mount --bind /dev dev
