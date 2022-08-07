@@ -23,3 +23,8 @@ busybox mount --bind /proc proc
 ```
 busybox chroot . /bin/bash -l
 ```
+```
+dd if=/dev/zero bs=1024 count=$((1024*1024*10)) >> linux.img
+e2fsck -f linux.img
+resize2fs linux.img
+```
